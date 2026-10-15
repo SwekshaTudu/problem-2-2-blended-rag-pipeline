@@ -1,0 +1,45 @@
+{
+  "archive_sha256": "8adc1f14f1c08d6e7387569bd1880701f4a0383b5643d463ba8d6e86871e2d01",
+  "archive_bytes": 35154168,
+  "files": {
+    "chunks.jsonl": "58c3006fdc44c3ee661c94add018f5a068b269fbe08864c712ad43c97576a878",
+    "content_bm25.npz": "a679360aa73263c1ec10206c127fd22537b0ce03ab92b837db910dac4af21c77",
+    "title_bm25.npz": "ccdb0b837195293ec062cc664b09356e74ed6fe686aeac3724b4b18837899541",
+    "vectors.npy": "a9867afe2e561a902f75319d410037e792a0b569111dda4aa5b25d2c30be5fff",
+    "vocabulary.json": "e4fac1632693e0fba570189a5607af1708e2b83d7cb7f985747c4e7f4517695e",
+    "manifest.json": "c26c2229baf36b9cebbe2bb47b2db12fd002843e1cae97fa3b67c795a08cfa79"
+  },
+  "index": {
+    "passages": 17280,
+    "documents": 1610,
+    "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "dimensions": 384,
+    "tie_breaker": 0.3,
+    "dense_boost": 10.0,
+    "dense_k": 10,
+    "chunks_sha256": "58c3006fdc44c3ee661c94add018f5a068b269fbe08864c712ad43c97576a878",
+    "strategy": "BM25 best_fields(title, content) + 10 * ((1 + cosine) / 2) for dense top-10 candidates",
+    "adaptation": "Exact local vector search, shared lexical vocabulary and per-field BM25 statistics; no Elasticsearch stemming or ELSER. Not bit-equivalent to Elasticsearch.",
+    "build_seconds_this_run": 4026.36,
+    "resumed_from_passage": 2816,
+    "build_threads": 8
+  },
+  "corpus": {
+    "repository": "https://github.com/kubernetes/website.git",
+    "revision": "e91eff3b59c0bf813193202a4f193d37beb7efd7",
+    "language": "en",
+    "documents": 1611,
+    "sections": {
+      "concepts": 186,
+      "reference": 1164,
+      "setup": 20,
+      "tasks": 206,
+      "tutorials": 35
+    },
+    "format": "raw Markdown, excluding YAML front matter; not yet chunked",
+    "sha256": "f7854a9e77e64c79bed9bd79b14c79fc8eed4bfd618870be213e240ca167a8ca",
+    "bytes": 16432192,
+    "license": "CC-BY-4.0; see data/raw/KUBERNETES_LICENSE.txt"
+  }
+}

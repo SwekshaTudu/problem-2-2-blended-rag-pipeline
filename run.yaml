@@ -1,19 +1,16 @@
-# Fill this in before you submit -- our evaluator runs these commands
-# EXACTLY as written, in this order, from a fresh checkout of your fork.
-# Keep every command non-interactive (no prompts) and idempotent.
-
 setup_commands:
-  - "pip install -r requirements.txt"
-  # - add every other setup step here, in order (env vars, downloads, etc.)
-
+  - 'python -m pip install -r requirements.txt'
+  - 'python src/main.py setup'
 run_commands:
-  - "python src/main.py --help"
-  # - the real command(s) that actually run your solution
-
-test_commands: []
-  # optional -- commands that run your own tests/checks, if you have any
-
-notes: ""
-  # anything we should know before running this (e.g. "needs a GPU",
-  # "takes about 10 minutes", "expects a sample dataset already present
-  # under data/, see docs/ for where to get it")
+  - 'python src/main.py search "How do I find previous logs from a restarting container?" --top-k 3'
+  - 'python src/main.py search "How do I debug a Kubernetes Service that has no endpoints?" --top-k 3 --json'
+test_commands:
+  - 'python -m unittest discover -s tests -v'
+  - 'python src/check_index.py'
+notes: >-
+  Python 3.12; CPU only. No API key, GPU, Docker, or Elasticsearch service.
+  Internet is required for pip packages and the pinned approximately 24 MB MiniLM
+  model download from Hugging Face. The complete 17,280-passage index is included
+  as a verified snapshot; default setup does not rebuild it. Setup is repeatable
+  and non-interactive. This submission performs text retrieval, not answer
+  generation. See README.md for optional full source rebuild commands.

@@ -5,3 +5,10 @@ venv/
 .env
 node_modules/
 .DS_Store
+vendor/
+.cache/
+data/raw/
+data/processed/
+models/
+artifacts/
+.verification/

@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/kubernetes/website.git",
+  "revision": "e91eff3b59c0bf813193202a4f193d37beb7efd7",
+  "language": "en",
+  "documents": 1611,
+  "sections": {
+    "concepts": 186,
+    "reference": 1164,
+    "setup": 20,
+    "tasks": 206,
+    "tutorials": 35
+  },
+  "format": "raw Markdown, excluding YAML front matter; not yet chunked",
+  "sha256": "f7854a9e77e64c79bed9bd79b14c79fc8eed4bfd618870be213e240ca167a8ca",
+  "bytes": 16432192,
+  "license": "CC-BY-4.0; see data/raw/KUBERNETES_LICENSE.txt"
+}
