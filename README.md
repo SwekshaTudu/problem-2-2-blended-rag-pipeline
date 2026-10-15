@@ -72,8 +72,4 @@ and `assets/snapshot_manifest.json`. IBM attribution, license and implementation
 differences are recorded in `THIRD_PARTY_NOTICES.md`; original license texts are
 retained under `licenses/`. See `docs/README.md` for the technical summary.
 
-## Submission requirements
 
-Grant the AIntropy Grader Bot access to this fork and push to the fork's default
-branch within the assignment deadline. The evaluator runs `run.yaml` commands
-from a fresh checkout. No pull request is required. Questions: careers@aintropy.ai.
